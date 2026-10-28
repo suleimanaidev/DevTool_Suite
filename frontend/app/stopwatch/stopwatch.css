@@ -1,0 +1,15 @@
+.stopwatch-card { text-align: center; padding: 2.5rem 1.25rem; }
+.sw-display {
+  font-family: "Courier New", Consolas, monospace; font-weight: 800;
+  font-size: clamp(2.6rem, 11vw, 5.5rem); letter-spacing: 2px; color: var(--text);
+}
+.sw-display.running { color: var(--primary); }
+.sw-buttons { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+.sw-main { min-width: 130px; padding: 0.8rem 1.4rem; font-size: 1.05rem; }
+
+.lap-table { display: grid; gap: 0.4rem; margin-top: 0.8rem; }
+.lap-row { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 0.55rem 0.9rem; border-radius: 10px; background: var(--card-alt); font-family: "Courier New", Consolas, monospace; font-weight: 600; }
+.lap-head { background: none; color: var(--muted); font-family: inherit; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+.lap-row.fast { background: var(--good-bg); color: var(--good); }
+.lap-row.slow { background: var(--bad-bg); color: var(--bad); }
+.lap-row span:nth-child(n+2) { text-align: right; }

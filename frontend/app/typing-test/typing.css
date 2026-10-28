@@ -1,0 +1,49 @@
+.typing-settings { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+
+.custom-time { display: inline-flex; align-items: center; gap: 0.4rem; }
+.custom-time input { width: 90px; padding: 0.35rem 0.6rem; }
+.custom-time select { width: auto; padding: 0.35rem 0.5rem; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.stat { text-align: center; padding: 0.9rem; }
+.stat-value { font-size: 1.9rem; font-weight: 800; }
+
+.paragraph {
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 1.5rem; font-weight: 700; line-height: 2.3; letter-spacing: 0.5px;
+  padding: 1.25rem 1.5rem; border-radius: 12px; background: #ffffff; border: 1px solid var(--border);
+  color: #1f1416; margin-bottom: 1rem; cursor: text; user-select: none; word-break: break-word;
+  position: relative; max-height: 270px; overflow-y: auto; scroll-behavior: smooth;
+}
+.paragraph .pending { color: #1f1416; }
+.paragraph .correct { color: #166534; background: rgba(34, 197, 94, 0.25); border-radius: 3px; }
+.paragraph .wrong { color: #fff; background: #dc2626; border-radius: 3px; }
+.paragraph .current { color: #1f1416; background: #ffd9a0; border-bottom: 3px solid var(--primary); border-radius: 3px; animation: blink 1s infinite; }
+@keyframes blink { 50% { background: #fff0d6; } }
+
+.typing-input { font-family: "Courier New", Consolas, monospace; font-size: 1.05rem; resize: vertical; }
+
+.result-card { margin-top: 1rem; text-align: center; border: 2px solid var(--primary-dark); }
+.record-badge {
+  display: inline-block; background: linear-gradient(135deg, #f59e0b, #ef4444); color: #fff;
+  padding: 0.2rem 0.8rem; border-radius: 999px; font-size: 0.9rem; vertical-align: middle;
+  animation: pop 0.5s ease;
+}
+@keyframes pop { from { transform: scale(0.5); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.best-line { text-align: center; margin-top: 1rem; }
+
+.custom-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.5rem; }
+.custom-list li {
+  display: flex; gap: 0.5rem; align-items: center; padding: 0.4rem;
+  border: 1px solid var(--border); border-radius: 10px;
+}
+.custom-list li.active { border-color: var(--primary-dark); background: var(--card-alt); }
+.custom-text {
+  flex: 1; text-align: left; background: none; border: none; color: var(--text);
+  cursor: pointer; font-family: inherit; font-size: 0.92rem; padding: 0.3rem;
+}
+.custom-text:hover { color: var(--primary); }
+
+@media (max-width: 600px) { .paragraph { font-size: 1.05rem; } }
+
+

@@ -1,0 +1,26 @@
+.landing { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem 2rem; }
+
+.land-header { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 0; border-bottom: 1px solid var(--border); }
+
+/* Hero: left aligned and plain */
+.land-hero { padding: 4rem 0 3rem; max-width: 760px; }
+.eyebrow { color: var(--primary); font-weight: 700; margin: 0 0 0.8rem; }
+.land-hero h1 { font-size: clamp(2.1rem, 5.5vw, 3.4rem); line-height: 1.15; margin: 0 0 1.2rem; }
+.underline { background: linear-gradient(transparent 62%, rgba(215, 38, 56, 0.28) 62%); }
+.lead { color: var(--muted); font-size: 1.15rem; line-height: 1.7; margin: 0 0 1.6rem; }
+.hero-buttons { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+.land-section { padding: 2.2rem 0; }
+.section-title { font-size: 1.6rem; margin-bottom: 1.2rem; }
+
+/* Tool cards: flat, with no gradient icon boxes */
+.landing .tool-icon { background: var(--cream); border: 1px solid var(--border); font-size: 1.5rem; width: 48px; height: 48px; border-radius: 12px; }
+.landing .tool-card h2 { font-size: 1.15rem; }
+.landing .feature-list { font-size: 0.93rem; line-height: 1.6; }
+.landing .tool-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+.notes ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9rem; max-width: 760px; }
+.notes li { padding-left: 1rem; border-left: 3px solid var(--primary); line-height: 1.6; color: var(--muted); }
+.notes li strong { color: var(--text); }
+
+.land-footer { padding: 1.5rem 0 0.5rem; margin-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.92rem; }
