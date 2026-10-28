@@ -5,7 +5,7 @@ import JsonLd from "../components/JsonLd";
 import { HOME_FAQ, SITE, homeJsonLd } from "../lib/seo";
 import "./landing.css";
 
-// The eleven tool cards (plain, honest descriptions).
+// The ten tool cards (plain, honest descriptions).
 // Page title and description for search engines (the root layout adds the rest).
 export const metadata = {
   title: { absolute: SITE.title },
@@ -15,7 +15,7 @@ export const metadata = {
 
 const TOOLS = [
   {
-    icon: "⌨️",
+    icon: "typing-test",
     title: "Typing Speed Test",
     href: "/typing-test",
     time: "about 3 hours",
@@ -27,7 +27,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "📝",
+    icon: "markdown",
     title: "Markdown Editor",
     href: "/markdown",
     time: "about 4 hours",
@@ -39,7 +39,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "🧾",
+    icon: "invoice",
     title: "Invoice Maker",
     href: "/invoice",
     time: "about 8 hours",
@@ -51,7 +51,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "⏱️",
+    icon: "stopwatch",
     title: "Stopwatch",
     href: "/stopwatch",
     time: "about 1 hour",
@@ -62,7 +62,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "🔤",
+    icon: "word-counter",
     title: "Word Counter",
     href: "/word-counter",
     time: "about 1 hour",
@@ -74,7 +74,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "⏳",
+    icon: "countdown",
     title: "Countdown Timer",
     href: "/countdown",
     time: "about 2 hours",
@@ -86,7 +86,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "🧮",
+    icon: "calculator",
     title: "Calculator",
     href: "/calculator",
     time: "about 2 hours",
@@ -98,7 +98,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "🖼️",
+    icon: "image-metadata",
     title: "Image Metadata Viewer",
     href: "/image-metadata",
     time: "about 2 hours",
@@ -110,19 +110,7 @@ const TOOLS = [
     ],
   },
   {
-    icon: "🎨",
-    title: "Color Palette Extractor",
-    href: "/color-palette",
-    time: "about 3 hours",
-    features: [
-      "Pull dominant colors from an image",
-      "Get HEX codes and RGB values",
-      "Choose 3 to 12 colors",
-      "Copy one color or the whole palette",
-    ],
-  },
-  {
-    icon: "🔄",
+    icon: "csv-to-json",
     title: "CSV to JSON",
     href: "/csv-to-json",
     time: "about 2 hours",
@@ -134,13 +122,13 @@ const TOOLS = [
     ],
   },
   {
-    icon: "🔳",
+    icon: "qr-code",
     title: "QR Code Generator",
     href: "/qr-code",
     time: "about 1 hour",
     features: [
       "Make a QR code for a link or text",
-      "Choose size, colors and error correction",
+      "Choose size, margin and error correction",
       "Download it as a PNG or SVG",
       "Updates as you type",
     ],
@@ -167,9 +155,9 @@ export default function Landing() {
           Everything you need for daily tasks, <span className="underline">in one place.</span>
         </h1>
         <p className="lead">
-          Eleven small, focused tools for text, images, files and time. Measure your typing, write Markdown,
-          make invoices, count words, set timers, run calculations, inspect photos, convert CSV to JSON,
-          pull color palettes and create QR codes. Each tool is free, and none of them needs an account.
+          Ten small, focused tools for text, images, files and time. Measure your typing, write Markdown,
+          make invoices, count words, set timers, run calculations, inspect photos, convert CSV to JSON
+          and create QR codes. Each tool is free, and none of them needs an account.
         </p>
         <div className="hero-buttons">
           <a href="#tools" className="btn btn-primary">

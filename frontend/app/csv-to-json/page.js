@@ -124,8 +124,9 @@ export default function CsvToJsonPage() {
     }
 
     try {
-      const activeDelimiter = delimiter === "auto" ? detectDelimiter(text) : delimiter;
-      const parsed = parseCsv(text, activeDelimiter);
+      const source = text.replace(/^\uFEFF/, "");
+      const activeDelimiter = delimiter === "auto" ? detectDelimiter(source) : delimiter;
+      const parsed = parseCsv(source, activeDelimiter);
       const warnings = [];
 
       if (!parsed.rows.length) {
@@ -159,6 +160,12 @@ export default function CsvToJsonPage() {
           return item;
         });
         columns = headers.length;
+
+        if (parsed.rows.slice(1).some((row) => row.length !== headers.length)) {
+          warnings.push(
+            "Some rows have a different number of columns. Missing cells become empty strings and extra cells are ignored."
+          );
+        }
       } else {
         data = parsed.rows.map((row) => row.map((value) => (trim ? value.trim() : value)));
         columns = Math.max(...parsed.rows.map((row) => row.length));

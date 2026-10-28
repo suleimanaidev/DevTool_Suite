@@ -6,20 +6,14 @@ import "./qr-code.css";
 
 const SIZES = [128, 256, 320, 512, 1024];
 
-const PRESETS = [
-  { name: "Classic", dark: "#2B1A1D", light: "#FFFCF7" },
-  { name: "Red", dark: "#B91C1C", light: "#FFF3E0" },
-  { name: "Blue", dark: "#1D4ED8", light: "#EFF6FF" },
-  { name: "Green", dark: "#15803D", light: "#F0FDF4" },
-];
+// QR codes stay pure black and white for the best scanning contrast.
+const QR_COLORS = { dark: "#000000", light: "#FFFFFF" };
 
 export default function QrCodePage() {
   const [text, setText] = useState("https://example.com");
   const [size, setSize] = useState(320);
   const [margin, setMargin] = useState(2);
   const [level, setLevel] = useState("M");
-  const [dark, setDark] = useState("#2B1A1D");
-  const [light, setLight] = useState("#FFFCF7");
   const [src, setSrc] = useState("");
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState("");
@@ -46,7 +40,7 @@ export default function QrCodePage() {
           width: size,
           margin,
           errorCorrectionLevel: level,
-          color: { dark, light },
+          color: QR_COLORS,
         });
         if (!cancelled) {
           setSrc(dataUrl);
@@ -66,7 +60,7 @@ export default function QrCodePage() {
       cancelled = true;
       clearTimeout(timer);
     };
-  }, [text, size, margin, level, dark, light]);
+  }, [text, size, margin, level]);
 
   function flash(msg) {
     setMessage(msg);
@@ -81,7 +75,7 @@ export default function QrCodePage() {
         type: "svg",
         margin,
         errorCorrectionLevel: level,
-        color: { dark, light },
+        color: QR_COLORS,
       });
       const blob = new Blob([svg], { type: "image/svg+xml;charset=utf-8" });
       const url = URL.createObjectURL(blob);
@@ -108,11 +102,6 @@ export default function QrCodePage() {
     } catch {
       flash("Copying images is not supported in this browser. Download the PNG instead.");
     }
-  }
-
-  function applyPreset(preset) {
-    setDark(preset.dark);
-    setLight(preset.light);
   }
 
   return (
@@ -212,34 +201,9 @@ export default function QrCodePage() {
             </div>
           </div>
 
-          <h3>Colors</h3>
-          <div className="qr-colors">
-            <div>
-              <label htmlFor="qr-dark">Dark</label>
-              <input id="qr-dark" type="color" value={dark} onChange={(e) => setDark(e.target.value)} />
-            </div>
-            <div>
-              <label htmlFor="qr-light">Light</label>
-              <input id="qr-light" type="color" value={light} onChange={(e) => setLight(e.target.value)} />
-            </div>
-          </div>
-
-          <div className="qr-presets">
-            {PRESETS.map((preset) => (
-              <button key={preset.name} className="qr-preset" onClick={() => applyPreset(preset)}>
-                <span
-                  className="qr-preset-swatch"
-                  style={{ background: `linear-gradient(135deg, ${preset.dark} 50%, ${preset.light} 50%)` }}
-                  aria-hidden="true"
-                />
-                {preset.name}
-              </button>
-            ))}
-          </div>
-
           <p className="muted qr-note">
-            Higher error correction makes the code denser but keeps it readable if part of it is covered. Keep good
-            contrast between the two colors.
+            Codes are always black on white for reliable scanning. Higher error correction makes the pattern denser
+            but keeps it readable if part of it is covered.
           </p>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const SITE = {
   name: "DevTools Suite",
   title: "DevTools Suite - Free Online Tools for Text, Images, Time & Data",
   description:
-    "Eleven free browser tools in one place: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter, color palette extractor and QR code generator. No sign-up needed.",
+    "Ten free browser tools in one place: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter and QR code generator. No sign-up needed.",
   keywords: [
     "free online tools",
     "typing speed test",
@@ -24,7 +24,6 @@ export const SITE = {
     "image metadata viewer",
     "exif viewer",
     "csv to json",
-    "color palette extractor",
     "qr code generator",
     "wpm test",
   ],
@@ -328,69 +327,35 @@ export const TOOL_SEO = {
     ],
   },
 
-  "color-palette": {
-    name: "Image Color Palette Extractor",
-    path: "/color-palette",
-    category: "MultimediaApplication",
-    title: "Free Image Color Palette Extractor - Get HEX Codes",
-    description:
-      "Upload an image to extract its dominant colors and get HEX and RGB codes. Choose how many colors, copy individual HEX values or export the palette as CSS. Runs in your browser.",
-    keywords: ["color palette extractor", "image color picker", "dominant colors", "hex color from image", "color palette generator", "extract colors from image"],
-    about:
-      "The Image Color Palette Extractor finds the most common colors in a picture and turns them into a usable palette. Drop a JPEG, PNG, WebP, GIF or SVG image, then choose between 3 and 12 colors. Each swatch shows its HEX code, RGB values and approximate share of the image. Click a swatch to copy its HEX code, copy the whole palette at once, or copy ready-to-paste CSS variables. The image is processed locally and is never uploaded.",
-    features: [
-      "Extract dominant colors from any browser-supported image",
-      "Choose 3 to 12 palette colors",
-      "HEX and RGB values on every swatch",
-      "One-click copy for a single HEX code or the whole palette",
-      "Copy the palette as CSS variables",
-      "Sample image included; everything runs in your browser",
-    ],
-    steps: [
-      { name: "Add an image", text: "Drop an image, choose a file, or click Try a sample." },
-      { name: "Set the number of colors", text: "Use the Colors menu to pick between 3 and 12 swatches." },
-      { name: "Copy a color", text: "Click any swatch to copy its HEX code, or use Copy HEX for the whole palette." },
-      { name: "Use it in CSS", text: "Copy CSS adds variables such as --color-1 with each HEX value." },
-    ],
-    faq: [
-      { q: "How does the color extractor work?", a: "The image is drawn into a small canvas, its pixels are grouped into similar color buckets, and the most common groups become the palette." },
-      { q: "How many colors can I extract?", a: "From 3 to 12 colors. The dominant color is shown first and spans two columns." },
-      { q: "Can I copy the HEX codes?", a: "Yes. Click any swatch to copy its HEX code, use Copy HEX for all of them on separate lines, or Copy CSS for CSS variables." },
-      { q: "Why do the percentages not add up to 100%?", a: "Similar colors are grouped together and only the top colors are shown, so the listed shares are approximate." },
-      { q: "Is my image uploaded?", a: "No. The image is read in your browser and never sent to a server." },
-      { q: "Which formats can I use?", a: "Any image your browser can display, such as JPEG, PNG, WebP, GIF, BMP and SVG." },
-    ],
-  },
-
   "qr-code": {
     name: "QR Code Generator",
     path: "/qr-code",
     category: "UtilitiesApplication",
     title: "Free QR Code Generator - Create and Download QR Codes",
     description:
-      "Create a QR code for a link, text or contact details. Choose the size, colors, margin and error correction, then download it as a PNG or SVG. Free and private.",
+      "Create a QR code for a link, text or contact details. Choose the size, margin and error correction, then download a crisp black-and-white PNG or SVG. Free and private.",
     keywords: ["qr code generator", "free qr code", "create qr code", "qr code png", "qr code svg", "online qr generator"],
     about:
-      "The QR Code Generator turns a link or any text into a scannable QR code. Type or paste your content and the preview updates as you go. Choose the image size, quiet-zone margin and error-correction level, then pick a dark and light color or use a preset. Download the finished code as a PNG for documents and social posts, or as an SVG for print and design work. The code is generated in your browser, so your content is never uploaded.",
+      "The QR Code Generator turns a link or any text into a scannable black-and-white QR code. Type or paste your content and the preview updates as you go. Choose the image size, quiet-zone margin and error-correction level, then download the finished code as a PNG for documents and social posts, or as an SVG for print and design work. The code is generated in your browser, so your content is never uploaded.",
     features: [
       "QR codes for links, text, Wi-Fi details and more",
       "Live preview while you type",
       "Size options from 128 to 1024 pixels",
       "Adjustable margin and four error-correction levels",
-      "Custom dark and light colors with quick presets",
+      "Clean black-and-white output for reliable scanning",
       "Download as PNG or SVG, or copy the PNG image",
     ],
     steps: [
       { name: "Enter the content", text: "Paste a URL or type the text you want the QR code to contain." },
-      { name: "Adjust the look", text: "Choose a size, margin, error-correction level and colors." },
+      { name: "Adjust the size", text: "Choose a size, margin and error-correction level." },
       { name: "Scan or check", text: "The preview updates automatically. Test it with your phone camera if you like." },
       { name: "Download", text: "Use Download PNG for everyday use or Download SVG for print and design work." },
     ],
     faq: [
-      { q: "How do I create a QR code?", a: "Type or paste your link or text, adjust the size and colors, then click Download PNG or Download SVG. The preview updates as you type." },
+      { q: "How do I create a QR code?", a: "Type or paste your link or text, adjust the size, margin and error correction, then click Download PNG or Download SVG. The preview updates as you type." },
       { q: "What is error correction?", a: "It controls how much of the QR code can be damaged or covered and still scan. Higher levels are more robust but make the pattern denser. Medium (15%) is a good default." },
       { q: "Can I download the QR code as a file?", a: "Yes. PNG is best for screens and documents, and SVG is a vector file that stays sharp at any size for printing." },
-      { q: "Can I change the colors?", a: "Yes. Pick any dark and light color, or use the Classic, Red, Blue and Green presets. Keep strong contrast so scanners can read the code." },
+      { q: "Are the QR codes black and white?", a: "Yes. Every code is generated in pure black on white, which gives the strongest contrast and the most reliable scans." },
       { q: "Why is the QR code not appearing?", a: "If the content is too long, it may not fit at the selected error-correction level. Shorten the text or choose a lower level such as Low." },
       { q: "Is my content uploaded?", a: "No. The QR code is generated entirely in your browser." },
     ],
@@ -399,10 +364,10 @@ export const TOOL_SEO = {
 
 // ---------------- Questions shown on the landing page ----------------
 export const HOME_FAQ = [
-  { q: "What is DevTools Suite?", a: "DevTools Suite is a free website with eleven everyday tools for text, images, files and time: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter, color palette extractor and QR code generator." },
+  { q: "What is DevTools Suite?", a: "DevTools Suite is a free website with ten everyday tools for text, images, files and time: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter and QR code generator." },
   { q: "Is DevTools Suite free to use?", a: "Yes. All tools are free and you do not need to create an account." },
   { q: "Where is my data stored?", a: "Typing scores, Markdown text, invoice data, word counter drafts, calculator history and saved settings are stored only in your own browser. Images, CSV text and QR content are processed locally and never uploaded." },
-  { q: "Are my images and files uploaded?", a: "No. Image metadata, color palettes, CSV conversion and QR code generation all run inside your browser. Nothing is sent to a server." },
+  { q: "Are my images and files uploaded?", a: "No. Image metadata, CSV conversion and QR code generation all run inside your browser. Nothing is sent to a server." },
   { q: "Can I download an invoice as a PDF?", a: "Yes. Open the Invoice Generator, fill in your details and click Download PDF, then choose Save as PDF in the print window." },
 ];
 

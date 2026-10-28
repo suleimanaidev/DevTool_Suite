@@ -1,6 +1,6 @@
 # DevTools Suite
 
-Eleven everyday tools on one website. Everything runs in the browser, so there is no backend and no database.
+Ten everyday tools on one website. Everything runs in the browser, so there is no backend and no database.
 
 | Tool | Route |
 |------|-------|
@@ -12,11 +12,10 @@ Eleven everyday tools on one website. Everything runs in the browser, so there i
 | Countdown Timer | `/countdown` |
 | Calculator | `/calculator` |
 | Image Metadata Viewer | `/image-metadata` |
-| Color Palette Extractor | `/color-palette` |
 | CSV to JSON Converter | `/csv-to-json` |
 | QR Code Generator | `/qr-code` |
 
-**Stack:** Next.js 15 (App Router, JavaScript) + plain CSS + framer-motion (animations).
+**Stack:** Next.js 15 (App Router, JavaScript) + plain CSS + framer-motion (animations) + exifr (image metadata) + qrcode (QR codes).
 
 ```
 /frontend   Next.js app

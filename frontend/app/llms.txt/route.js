@@ -8,7 +8,7 @@ export function GET() {
   lines.push(`# ${SITE.name}`, "");
   lines.push(`> ${SITE.description}`, "");
   lines.push(
-    "DevTools Suite is a free website with eleven browser-based tools. No account is needed. Typing scores, Markdown text, invoice data, word counter drafts and calculator history are stored only in the user's own browser. Images, CSV text and QR content are processed locally and never uploaded.",
+    "DevTools Suite is a free website with ten browser-based tools. No account is needed. Typing scores, Markdown text, invoice data, word counter drafts and calculator history are stored only in the user's own browser. Images, CSV text and QR content are processed locally and never uploaded.",
     ""
   );
 

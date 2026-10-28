@@ -21,17 +21,17 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ display: "flex", fontSize: 34, fontWeight: 700, color: "#D72638" }}>DevTools Suite</div>
-        <div style={{ display: "flex", fontSize: 76, fontWeight: 800, lineHeight: 1.1, marginTop: 24 }}>
+        <div style={{ display: "flex", fontSize: 72, fontWeight: 800, lineHeight: 1.1, marginTop: 24 }}>
           Free online tools for everyday work
         </div>
-        <div style={{ display: "flex", fontSize: 30, marginTop: 36, color: "#7a6468", lineHeight: 1.5 }}>
+        <div style={{ display: "flex", fontSize: 28, marginTop: 28, color: "#7a6468", lineHeight: 1.4 }}>
           Typing Test · Markdown Editor · Invoice Maker · Stopwatch
         </div>
-        <div style={{ display: "flex", fontSize: 28, color: "#7a6468", lineHeight: 1.5 }}>
-          Word Counter · Countdown Timer · Calculator
+        <div style={{ display: "flex", fontSize: 26, color: "#7a6468", lineHeight: 1.4 }}>
+          Word Counter · Countdown · Calculator · Image Metadata
         </div>
-        <div style={{ display: "flex", fontSize: 28, color: "#7a6468", lineHeight: 1.5 }}>
-          Image Metadata · Color Palette · CSV to JSON · QR Code
+        <div style={{ display: "flex", fontSize: 26, color: "#7a6468", lineHeight: 1.4 }}>
+          CSV to JSON · QR Code
         </div>
         <div style={{ display: "flex", width: 160, height: 10, background: "#D72638", marginTop: 48 }} />
       </div>
