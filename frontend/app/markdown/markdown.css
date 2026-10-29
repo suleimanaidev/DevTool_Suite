@@ -46,7 +46,9 @@
 
 .style-panel { margin: 0 1.25rem 1.25rem; padding-top: 1rem; border-top: 2px dashed var(--border); }
 .style-panel h2 { font-size: 1.1rem; }
-.style-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.9rem; margin-top: 1rem; }
-.style-card { display: flex; flex-direction: column; gap: 0.6rem; padding: 0.9rem; border: 1px solid var(--border); border-radius: 12px; background: var(--card-alt); }
-.style-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
-.style-output { font-size: 1.2rem; flex: 1; word-break: break-word; white-space: pre-wrap; min-height: 2rem; max-height: 140px; overflow: auto; }
+.style-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 0.7rem; margin-top: 0.9rem; }
+.style-card { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.75rem; border: 1px solid var(--border); border-radius: 12px; background: var(--card-alt); }
+.style-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--muted); }
+.style-output { font-size: 1.1rem; flex: 1; word-break: break-word; white-space: pre-wrap; min-height: 1.8rem; max-height: 120px; overflow: auto; }
+.style-card .row { gap: 0.35rem; }
+.style-card .btn-sm { padding: 0.3rem 0.55rem; font-size: 0.75rem; }
