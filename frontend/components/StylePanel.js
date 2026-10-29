@@ -55,9 +55,6 @@ export default function StylePanel({ source, hasSelection, onApply, onCopyMessag
           );
         })}
       </div>
-      <p className="muted" style={{ marginTop: "0.8rem" }}>
-        These are special Unicode characters, not real Markdown. They look a little different in some apps.
-      </p>
     </section>
   );
 }
