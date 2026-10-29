@@ -6,8 +6,8 @@ import "./qr-code.css";
 
 const SIZES = [128, 256, 320, 512, 1024];
 
-// QR codes stay pure black and white for the best scanning contrast.
-const QR_COLORS = { dark: "#000000", light: "#FFFFFF" };
+// QR codes use only the classic dark-on-cream palette for reliable scanning.
+const QR_COLORS = { dark: "#2B1A1D", light: "#FFFCF7" };
 
 export default function QrCodePage() {
   const [text, setText] = useState("https://example.com");
@@ -202,8 +202,8 @@ export default function QrCodePage() {
           </div>
 
           <p className="muted qr-note">
-            Codes are always black on white for reliable scanning. Higher error correction makes the pattern denser
-            but keeps it readable if part of it is covered.
+            QR codes use the classic dark-on-cream style. Higher error correction makes the pattern denser but keeps
+            it readable if part of it is covered.
           </p>
         </div>
       </div>

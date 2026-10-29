@@ -333,16 +333,16 @@ export const TOOL_SEO = {
     category: "UtilitiesApplication",
     title: "Free QR Code Generator - Create and Download QR Codes",
     description:
-      "Create a QR code for a link, text or contact details. Choose the size, margin and error correction, then download a crisp black-and-white PNG or SVG. Free and private.",
+      "Create a QR code for a link, text or contact details. Choose the size, margin and error correction, then download a crisp Classic PNG or SVG. Free and private.",
     keywords: ["qr code generator", "free qr code", "create qr code", "qr code png", "qr code svg", "online qr generator"],
     about:
-      "The QR Code Generator turns a link or any text into a scannable black-and-white QR code. Type or paste your content and the preview updates as you go. Choose the image size, quiet-zone margin and error-correction level, then download the finished code as a PNG for documents and social posts, or as an SVG for print and design work. The code is generated in your browser, so your content is never uploaded.",
+      "The QR Code Generator turns a link or any text into a scannable QR code in the classic dark-on-cream style. Type or paste your content and the preview updates as you go. Choose the image size, quiet-zone margin and error-correction level, then download the finished code as a PNG for documents and social posts, or as an SVG for print and design work. The code is generated in your browser, so your content is never uploaded.",
     features: [
       "QR codes for links, text, Wi-Fi details and more",
       "Live preview while you type",
       "Size options from 128 to 1024 pixels",
       "Adjustable margin and four error-correction levels",
-      "Clean black-and-white output for reliable scanning",
+      "Classic dark-on-cream output for reliable scanning",
       "Download as PNG or SVG, or copy the PNG image",
     ],
     steps: [
@@ -355,7 +355,7 @@ export const TOOL_SEO = {
       { q: "How do I create a QR code?", a: "Type or paste your link or text, adjust the size, margin and error correction, then click Download PNG or Download SVG. The preview updates as you type." },
       { q: "What is error correction?", a: "It controls how much of the QR code can be damaged or covered and still scan. Higher levels are more robust but make the pattern denser. Medium (15%) is a good default." },
       { q: "Can I download the QR code as a file?", a: "Yes. PNG is best for screens and documents, and SVG is a vector file that stays sharp at any size for printing." },
-      { q: "Are the QR codes black and white?", a: "Yes. Every code is generated in pure black on white, which gives the strongest contrast and the most reliable scans." },
+      { q: "Can I change the QR code colors?", a: "No. The generator always uses the classic dark-on-cream style, which keeps strong contrast and reliable scans." },
       { q: "Why is the QR code not appearing?", a: "If the content is too long, it may not fit at the selected error-correction level. Shorten the text or choose a lower level such as Low." },
       { q: "Is my content uploaded?", a: "No. The QR code is generated entirely in your browser." },
     ],
