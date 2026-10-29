@@ -4,7 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { TEXT_STYLES } from "../lib/textStyles";
 
-// Shows the editor text (or just the selected part) in many Unicode bold/italic styles.
+// The Markdown page previews the first eight styles only.
+const VISIBLE_STYLES = TEXT_STYLES.slice(0, 8);
+
+// Shows the editor text (or just the selected part) in Unicode bold/italic styles.
 // "source" is the text to convert. "onApply" puts a styled version back into the editor.
 export default function StylePanel({ source, hasSelection, onApply, onCopyMessage }) {
   const [copiedId, setCopiedId] = useState("");
@@ -23,7 +26,7 @@ export default function StylePanel({ source, hasSelection, onApply, onCopyMessag
   return (
     <section className="style-panel">
       <div className="style-grid">
-        {TEXT_STYLES.map((style, i) => {
+        {VISIBLE_STYLES.map((style, i) => {
           const output = style.convert(source || "Your text");
           return (
             <motion.div
