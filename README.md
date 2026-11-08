@@ -38,15 +38,15 @@ Open http://localhost:3000. Production build: `npm run build` (writes the static
 
 The site is fully static (`output: "export"` in `next.config.mjs`), so it runs on Cloudflare Pages with no server.
 
-1. Set `NEXT_PUBLIC_SITE_URL` in `.env.local` to the final URL, for example `https://devtools-suite.pages.dev`.
+1. Set `NEXT_PUBLIC_SITE_URL` in `.env.local` to the final URL, for example `https://devtoolssuite.pages.dev`.
 2. Run `npm run build`.
 3. Deploy the `out/` folder:
 
 ```bash
-npx wrangler pages deploy out --project-name devtools-suite
+npx wrangler pages deploy out --project-name devtoolssuite
 ```
 
-The first deploy creates the Pages project. Later deploys can use the same command. `public/_headers` sets the correct content type for the social preview image and long-term caching for built assets.
+The project is connected to GitHub (`suleimanaidev/DevTool_Suite`, branch `main`), so pushes to `main` deploy automatically. The manual command above can still be used for an ad-hoc direct-upload deploy. `public/_headers` sets the correct content type for the social preview image and long-term caching for built assets.
 
 ## Notes
 
