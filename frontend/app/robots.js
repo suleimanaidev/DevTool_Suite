@@ -1,5 +1,8 @@
 import { SITE_URL } from "../lib/seo";
 
+// Required for `output: "export"` (Cloudflare Pages static export).
+export const dynamic = "force-static";
+
 // AI crawlers that are welcome to read the site (helps it appear in AI answers - "GEO").
 const AI_BOTS = [
   "GPTBot",

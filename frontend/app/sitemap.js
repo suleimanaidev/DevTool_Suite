@@ -1,5 +1,8 @@
 import { TOOL_SEO, url } from "../lib/seo";
 
+// Required for `output: "export"` (Cloudflare Pages static export).
+export const dynamic = "force-static";
+
 // Served at /sitemap.xml - lists every page for search engines.
 export default function sitemap() {
   const now = new Date();

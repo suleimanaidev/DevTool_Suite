@@ -1,5 +1,8 @@
 import { ImageResponse } from "next/og";
 
+// Required for `output: "export"` (Cloudflare Pages static export).
+export const dynamic = "force-static";
+
 // The preview picture shown when the site is shared (Facebook, WhatsApp, LinkedIn, X...).
 export const alt = "DevTools Suite - free online tools";
 export const size = { width: 1200, height: 630 };

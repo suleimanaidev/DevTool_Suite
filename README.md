@@ -30,9 +30,23 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000. Production check: `npm run build && npm start`.
+Open http://localhost:3000. Production build: `npm run build` (writes the static site to `out/`). Preview it locally with `npm run preview`.
 
 `NEXT_PUBLIC_SITE_URL` (in `.env.local`) is your public website address. It is used for SEO (canonical links, sitemap, social previews). Set it to your real domain when you deploy.
+
+## Deploy to Cloudflare Pages
+
+The site is fully static (`output: "export"` in `next.config.mjs`), so it runs on Cloudflare Pages with no server.
+
+1. Set `NEXT_PUBLIC_SITE_URL` in `.env.local` to the final URL, for example `https://devtools-suite.pages.dev`.
+2. Run `npm run build`.
+3. Deploy the `out/` folder:
+
+```bash
+npx wrangler pages deploy out --project-name devtools-suite
+```
+
+The first deploy creates the Pages project. Later deploys can use the same command. `public/_headers` sets the correct content type for the social preview image and long-term caching for built assets.
 
 ## Notes
 

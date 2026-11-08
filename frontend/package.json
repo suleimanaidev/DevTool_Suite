@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "preview": "npx --yes wrangler@latest pages dev out"
   },
   "dependencies": {
     "exifr": "^7.1.3",
