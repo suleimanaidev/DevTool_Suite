@@ -201,7 +201,12 @@ export default function Landing() {
 
       <JsonLd data={homeJsonLd()} />
 
-      <footer className="land-footer">DevTools Suite. Simple, reliable tools for everyday work.</footer>
+      <footer className="land-footer">
+        DevTools Suite. Simple, reliable tools for everyday work.{" "}
+        <Link className="land-footer-link" href="/sitemap">
+          Sitemap
+        </Link>
+      </footer>
     </div>
   );
 }

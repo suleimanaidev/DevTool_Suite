@@ -55,3 +55,5 @@
 .notes li strong { color: var(--text); }
 
 .land-footer { padding: 1.5rem 0 0.5rem; margin-top: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.92rem; }
+.land-footer-link { color: var(--primary-dark); font-weight: 700; margin-left: 0.25rem; }
+.land-footer-link:hover { text-decoration: underline; }

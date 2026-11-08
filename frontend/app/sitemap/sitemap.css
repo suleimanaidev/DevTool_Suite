@@ -1,0 +1,33 @@
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.sitemap-list:last-child {
+  margin-bottom: 0;
+}
+
+.sitemap-list li {
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
+.sitemap-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.sitemap-list a,
+.sitemap-xml-link {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.sitemap-list a:hover,
+.sitemap-xml-link:hover {
+  text-decoration: underline;
+}
