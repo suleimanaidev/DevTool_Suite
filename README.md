@@ -1,6 +1,6 @@
 # DevTools Suite
 
-Ten everyday tools on one website. Everything runs in the browser, so there is no backend and no database.
+Thirteen everyday tools on one website. Everything runs in the browser, so there is no backend and no database.
 
 | Tool | Route |
 |------|-------|
@@ -14,6 +14,9 @@ Ten everyday tools on one website. Everything runs in the browser, so there is n
 | Image Metadata Viewer | `/image-metadata` |
 | CSV to JSON Converter | `/csv-to-json` |
 | QR Code Generator | `/qr-code` |
+| Tooltip | `/tooltip` |
+| Social Icons | `/social-icons` |
+| Send Button | `/send-button` |
 
 **Stack:** Next.js 15 (App Router, JavaScript) + plain CSS + framer-motion (animations) + exifr (image metadata) + qrcode (QR codes).
 
@@ -56,4 +59,7 @@ The project is connected to GitHub (`suleimanaidev/DevTool_Suite`, branch `main`
 - Typing records, custom paragraphs, Markdown text, invoice data, word counter drafts, countdown settings and calculator history are saved in your browser's `localStorage`.
 - The stopwatch and countdown timer use short Web Audio sound effects, so no audio files are needed.
 - Image metadata is read with `exifr`; QR codes are generated with `qrcode`. Both run entirely in the browser.
+- The Tooltip tool previews a pure-CSS Tip badge and can copy or download a standalone HTML file. The design is from [Uiverse.io by vnuny](https://uiverse.io/vnuny/stale-mouse-74) (MIT).
+- The Social Icons tool previews round social buttons with hover tooltips and can copy or download a standalone HTML file. The design is from [Uiverse.io by wilsondesouza](https://uiverse.io/wilsondesouza/cowardly-swan-91) (MIT).
+- The Send Button tool previews a blue button whose paper plane flies on hover, and can copy or download a standalone HTML file. The design is from [Uiverse.io by adamgiebl](https://uiverse.io/adamgiebl/smart-moth-68) (MIT).
 - SEO / AEO / GEO: per-page metadata, FAQ and how-to structured data (JSON-LD), `/sitemap.xml`, `/robots.txt` (AI crawlers allowed) and `/llms.txt`. The content lives in `frontend/lib/seo.js`.

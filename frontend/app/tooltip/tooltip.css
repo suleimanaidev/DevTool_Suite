@@ -1,0 +1,245 @@
+/* From Uiverse.io by vnuny - https://uiverse.io/vnuny/stale-mouse-74
+   MIT License, Copyright (c) vnuny (Diaa) */
+
+/* ===== The tooltip (class names are scoped with the uiverse-tip prefix) ===== */
+.uiverse-tip {
+  --purple: #720c8f;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.uiverse-tip__hint {
+  margin: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uiverse-tip__dot {
+  z-index: 3;
+  border: 1px solid #720c8f;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-transform: translate(-0%, -0%) scale(0.95);
+  transform: translate(-0%, -0%) scale(0.95);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #720c8f;
+  background: transparent;
+  padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.uiverse-tip__radius {
+  background-color: rgba(114, 12, 143, 0.08);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0 0 -125px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.uiverse-tip__content {
+  width: 300px;
+  position: absolute;
+  z-index: 5;
+  padding: 35px 0;
+  opacity: 0;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  color: #2b1a1d;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.uiverse-tip__hint:hover .uiverse-tip__content,
+.uiverse-tip__hint:focus-within .uiverse-tip__content {
+  opacity: 1;
+  transition: opacity 0.7s ease, visibility 0.7s ease;
+  visibility: visible;
+}
+
+.uiverse-tip__content::before {
+  width: 0px;
+  bottom: 29px;
+  left: 0;
+  content: "";
+  background-color: #720c8f;
+  height: 1px;
+  position: absolute;
+  transition: width 0.4s;
+}
+
+.uiverse-tip__hint:hover .uiverse-tip__content::before,
+.uiverse-tip__hint:focus-within .uiverse-tip__content::before {
+  width: 180px;
+  transition: width 0.4s;
+}
+
+.uiverse-tip__content::after {
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+  bottom: 29px;
+  left: 0;
+  width: 80px;
+  content: "";
+  background-color: #720c8f;
+  height: 1px;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  transition-delay: 0s;
+}
+
+.uiverse-tip__hint:hover .uiverse-tip__content::after,
+.uiverse-tip__hint:focus-within .uiverse-tip__content::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.uiverse-tip__hint[data-position="1"] .uiverse-tip__content {
+  top: 85px;
+  left: 50%;
+  margin-left: 56px;
+}
+
+.uiverse-tip__hint[data-position="4"] .uiverse-tip__content {
+  bottom: 85px;
+  left: 50%;
+  margin-left: 56px;
+}
+
+/* Keyboard users get the same reveal as hover. */
+.uiverse-tip__dot:focus-visible {
+  outline: 2px solid #720c8f;
+  outline-offset: 4px;
+}
+
+/* ===== The tool page ===== */
+.tooltip-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.tooltip-preview-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.tooltip-preview-head h2,
+.tooltip-download-card h2 {
+  font-size: 1.05rem;
+}
+.tooltip-preview-head p {
+  margin: 0;
+}
+
+.tooltip-stage {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  min-height: 360px;
+  margin: 0.9rem 0;
+  padding: 1.5rem 1.5rem 2.5rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background:
+    radial-gradient(220px 180px at 18% 22%, rgba(215, 38, 56, 0.12), transparent 70%),
+    var(--card-alt);
+  overflow: hidden;
+}
+
+.tooltip-hint {
+  margin: 0;
+}
+
+.tooltip-download-card p {
+  margin-top: 0.4rem;
+}
+
+.tooltip-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.tooltip-license {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .tooltip-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .tooltip-stage {
+    min-height: 340px;
+    padding: 1.25rem 1rem 2rem 1.25rem;
+  }
+  .uiverse-tip__content {
+    width: 220px;
+    padding: 26px 0;
+  }
+  .uiverse-tip__hint[data-position="4"] .uiverse-tip__content {
+    bottom: 78px;
+    margin-left: 28px;
+  }
+  .uiverse-tip__hint:hover .uiverse-tip__content::before,
+  .uiverse-tip__hint:focus-within .uiverse-tip__content::before {
+    width: 140px;
+  }
+}
+
+@media (max-width: 420px) {
+  .tooltip-stage {
+    padding-left: 0.9rem;
+    padding-right: 0.75rem;
+  }
+  .uiverse-tip__content {
+    width: 185px;
+    padding: 22px 0;
+  }
+  .uiverse-tip__hint[data-position="4"] .uiverse-tip__content {
+    bottom: 76px;
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tooltip-stage {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .uiverse-tip__content {
+    width: 150px;
+    padding: 18px 0;
+  }
+  .uiverse-tip__hint[data-position="4"] .uiverse-tip__content {
+    bottom: 72px;
+    margin-left: 12px;
+  }
+  .uiverse-tip__hint:hover .uiverse-tip__content::before,
+  .uiverse-tip__hint:focus-within .uiverse-tip__content::before {
+    width: 110px;
+  }
+}

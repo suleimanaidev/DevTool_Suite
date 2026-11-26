@@ -31,7 +31,7 @@ export default function SitemapPage() {
         <ul className="sitemap-list">
           <li>
             <Link href="/">Home</Link>
-            <span className="muted"> - all ten tools at a glance</span>
+            <span className="muted"> - all thirteen tools at a glance</span>
           </li>
           <li>
             <Link href="/sitemap">Sitemap</Link>

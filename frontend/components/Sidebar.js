@@ -32,6 +32,14 @@ const NAV_GROUPS = [
     ],
   },
   {
+    label: "Developer",
+    links: [
+      { href: "/tooltip", label: "Tooltip", icon: "tooltip" },
+      { href: "/social-icons", label: "Social Icons", icon: "social-icons" },
+      { href: "/send-button", label: "Send Button", icon: "send-button" },
+    ],
+  },
+  {
     label: "Utilities",
     links: [{ href: "/calculator", label: "Calculator", icon: "calculator" }],
   },

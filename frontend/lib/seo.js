@@ -10,7 +10,7 @@ export const SITE = {
   name: "DevTools Suite",
   title: "DevTools Suite - Free Online Tools for Text, Images, Time & Data",
   description:
-    "Ten free browser tools in one place: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter and QR code generator. No sign-up needed.",
+    "Thirteen free browser tools in one place: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter, QR code generator, social icon buttons with tooltips, a CSS tooltip and an animated send button. No sign-up needed.",
   keywords: [
     "free online tools",
     "typing speed test",
@@ -25,6 +25,14 @@ export const SITE = {
     "exif viewer",
     "csv to json",
     "qr code generator",
+    "social icons",
+    "social media buttons",
+    "css social icons",
+    "css tooltip",
+    "tooltip component",
+    "send button",
+    "animated button",
+    "css button",
     "wpm test",
   ],
 };
@@ -360,11 +368,129 @@ export const TOOL_SEO = {
       { q: "Is my content uploaded?", a: "No. The QR code is generated entirely in your browser." },
     ],
   },
+
+  "social-icons": {
+    name: "Social Icons",
+    path: "/social-icons",
+    category: "DeveloperApplication",
+    title: "Free Social Icons with Tooltips - HTML and CSS",
+    description:
+      "Preview round social media buttons that show a tooltip on hover, then copy or download the HTML and CSS. Includes LinkedIn, GitHub, Instagram and YouTube icons.",
+    keywords: [
+      "social icons",
+      "social media buttons",
+      "social links",
+      "css social icons",
+      "html css social buttons",
+      "tooltip icons",
+    ],
+    about:
+      "The Social Icons tool shows a vertical set of four round social buttons: LinkedIn, GitHub, Instagram and YouTube. Each button lifts a coloured fill from the bottom on hover and reveals a tooltip in the same brand colour. The icons are inline SVGs, so there are no image files to load. Preview the set live on this page, then copy or download a complete standalone HTML file with one click. The original design is by wilsondesouza on Uiverse.io and is reused under the MIT license.",
+    features: [
+      "LinkedIn, GitHub, Instagram and YouTube buttons",
+      "Round white icons with a coloured fill on hover",
+      "Tooltips that appear beside each icon",
+      "Inline SVG icons with no image files",
+      "Scoped uiverse-social class names",
+      "Copy or download the complete HTML and CSS",
+    ],
+    steps: [
+      { name: "Try the preview", text: "Hover any icon to see the coloured fill and its tooltip. Click an icon to open the social site in a new tab." },
+      { name: "Get the code", text: "Click Get code to copy the complete HTML file, including the markup, the styles and the original credit." },
+      { name: "Use it", text: "Paste the code into any .html file and open it in a browser, or download the file and open that." },
+      { name: "Change the links", text: "Replace the href, aria-label and tooltip text with your own profile links." },
+    ],
+    faq: [
+      { q: "How do I add these social icons to my website?", a: "Click Get code to copy the complete HTML file, then change the links, labels and tooltip text. Keep the credit comment if you reuse the design." },
+      { q: "Which social networks are included?", a: "LinkedIn, GitHub, Instagram and YouTube. You can add more by copying one list item and changing its data-social value, link and icon." },
+      { q: "Do the icons need image files?", a: "No. The logos are inline SVG paths inside the HTML, so there is nothing else to download." },
+      { q: "How do the hover colours work?", a: "Each link has a data-social attribute. CSS uses that attribute to colour the rising fill and the tooltip: blue for LinkedIn, dark grey for GitHub, a gradient for Instagram and red for YouTube." },
+      { q: "Are the class names safe to use?", a: "They are prefixed with uiverse-social, so they are unlikely to clash with other styles on your page." },
+      { q: "What licence is the original design under?", a: "It is MIT licensed, copyright (c) PriyanshuGupta28 (Priyanshu Gupta) and wilsondesouza (Wilson Souza). Keep the credit comment when you reuse it." },
+    ],
+  },
+
+  tooltip: {
+    name: "Tooltip",
+    path: "/tooltip",
+    category: "DeveloperApplication",
+    title: "Free CSS Tooltip - Hover Tip Badge with HTML and CSS",
+    description:
+      "Preview a circular Tip badge that reveals a hint on hover or focus, then copy or download the HTML and CSS. A small, accessible tooltip component with a pure-CSS animation.",
+    keywords: ["tooltip", "css tooltip", "hover tooltip", "html css tooltip", "tooltip component", "uiverse tooltip"],
+    about:
+      "The Tooltip tool shows a small circular Tip badge that opens a short hint when you hover it, focus it with the keyboard, or tap it on a touch screen. The effect is built with plain HTML and CSS: a dot, a 300px hint panel, a fading transition and two thin lines that draw out beside the text. Preview the component live on this page, then copy or download a complete standalone HTML file with one click. The original design is by vnuny on Uiverse.io and is reused under the MIT license.",
+    features: [
+      "Circular Tip badge with a pure-CSS reveal",
+      "Opens on hover and on keyboard focus",
+      "Fading text plus animated guide lines",
+      "Scoped class names so the styles do not leak",
+      "Copy the full code with one click",
+      "Download a standalone HTML demo with the credit",
+    ],
+    steps: [
+      { name: "Try the preview", text: "Hover the Tip badge or press Tab to focus it. The hint fades in above and to the right of the dot." },
+      { name: "Get the code", text: "Click Get code to copy the complete HTML file, including the markup, the styles and the original credit." },
+      { name: "Use it", text: "Paste the code into any .html file and open it in a browser, or download the file and open that." },
+      { name: "Change the text", text: "Edit the paragraph inside the hint and the Tip label to match your own site." },
+    ],
+    faq: [
+      { q: "How do I add this tooltip to my website?", a: "Click Get code to copy the complete HTML file, then change the hint text. If you are adding it to an existing project, copy the markup and styles from that file and keep the credit comment." },
+      { q: "Does the tooltip work on phones?", a: "Yes. The Tip badge is a button, so tapping it gives it focus and opens the hint. Tapping elsewhere closes it." },
+      { q: "Can I use it with a keyboard?", a: "Yes. Press Tab until the Tip badge is focused and the hint appears. The reveal also triggers with the :focus-within selector." },
+      { q: "Are the class names safe to use?", a: "They are prefixed with uiverse-tip, so they are unlikely to clash with other styles on your page." },
+      { q: "Can I change the colours?", a: "Yes. The hint text and lines are white and the dot has a light border. The dark background in the preview is only there so the white hint is easy to read." },
+      { q: "What licence is the original design under?", a: "It is MIT licensed, copyright (c) vnuny (Diaa). Keep the credit comment when you reuse it." },
+    ],
+  },
+
+  "send-button": {
+    name: "Send Button",
+    path: "/send-button",
+    category: "DeveloperApplication",
+    title: "Free Send Button with Hover Animation - HTML and CSS",
+    description:
+      "Preview a blue Send button with a paper plane that rocks and flies on hover, then copy or download the HTML and CSS. A small animated button built with pure CSS.",
+    keywords: [
+      "send button",
+      "animated button",
+      "css button",
+      "hover button",
+      "paper plane button",
+      "html css button",
+      "royalblue button",
+    ],
+    about:
+      "The Send Button tool shows a royalblue button with a paper-plane icon and the word Send, displayed in an egg-white preview window. On hover the icon rocks up and down, the plane flies forward and turns, and the label slides out of the button. Pressing it adds a short scale-down effect. The whole animation uses plain HTML and CSS, with no JavaScript. Preview the button live on this page, then copy or download a complete standalone HTML file with one click. The original design is by adamgiebl on Uiverse.io and is reused under the MIT license.",
+    features: [
+      "Blue Send button with a paper-plane icon",
+      "Plane and label animate on hover",
+      "Press effect with a scale-down",
+      "Pure CSS, no JavaScript",
+      "Scoped uiverse-send-btn class names",
+      "Copy or download the complete HTML and CSS",
+    ],
+    steps: [
+      { name: "Try the preview", text: "Hover the button to see the plane fly and the label slide out, then press it to see the scale-down effect." },
+      { name: "Get the code", text: "Click Get code to copy the complete HTML file, including the markup, the styles and the original credit." },
+      { name: "Use it", text: "Paste the code into any .html file and open it in a browser, or download the file and open that." },
+      { name: "Change the label", text: "Edit the Send label and the icon to match the action you need." },
+    ],
+    faq: [
+      { q: "How do I add this button to my website?", a: "Click Get code to copy the complete HTML file, then change the label if needed. Keep the credit comment if you reuse the design." },
+      { q: "Does the animation need JavaScript?", a: "No. The hover movement, the flying plane and the press effect are all done with CSS transitions and one keyframe animation." },
+      { q: "Can I change the text or colour?", a: "Yes. Change the word Send inside the label span, and change the royalblue background and border-radius in the .uiverse-send-btn rule." },
+      { q: "Why does the label slide out?", a: "On hover the label moves 5em to the right while the button clips it with overflow hidden. At the same time the plane moves forward, rotates and grows slightly. That is the original effect." },
+      { q: "Are the class names safe to use?", a: "They are prefixed with uiverse-send-btn, so they are unlikely to clash with other styles on your page." },
+      { q: "What colour is the preview background?", a: "The live preview uses the site's egg-white background (#FFF3E0) with a soft red tint. The downloaded HTML file uses the same background so the button looks the same outside this site." },
+      { q: "What licence is the original design under?", a: "It is MIT licensed, copyright (c) adamgiebl (Adam Giebl). Keep the credit comment when you reuse it." },
+    ],
+  },
 };
 
 // ---------------- Questions shown on the landing page ----------------
 export const HOME_FAQ = [
-  { q: "What is DevTools Suite?", a: "DevTools Suite is a free website with ten everyday tools for text, images, files and time: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter and QR code generator." },
+  { q: "What is DevTools Suite?", a: "DevTools Suite is a free website with thirteen everyday tools for text, images, files, time and UI: typing test, Markdown editor, invoice maker, stopwatch, word counter, countdown timer, calculator, image metadata viewer, CSV to JSON converter, QR code generator, social icon buttons, a copyable CSS tooltip and an animated send button." },
   { q: "Is DevTools Suite free to use?", a: "Yes. All tools are free and you do not need to create an account." },
   { q: "Where is my data stored?", a: "Typing scores, Markdown text, invoice data, word counter drafts, calculator history and saved settings are stored only in your own browser. Images, CSV text and QR content are processed locally and never uploaded." },
   { q: "Are my images and files uploaded?", a: "No. Image metadata, CSV conversion and QR code generation all run inside your browser. Nothing is sent to a server." },

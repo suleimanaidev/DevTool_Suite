@@ -69,6 +69,27 @@ const ICONS = {
       <path d="M14 14h3v3h-3zM20 14h1M14 20h1M18 18h3v3h-3z" />
     </>
   ),
+  "social-icons": (
+    <>
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4" />
+    </>
+  ),
+  "send-button": (
+    <>
+      <path d="m22 2-7 20-4-9-9-4Z" />
+      <path d="M22 2 11 13" />
+    </>
+  ),
+  tooltip: (
+    <>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M9.5 9a2.5 2.5 0 0 1 4.9.7c0 1.8-2.4 2-2.4 3.3" />
+      <path d="M12 17h.01" />
+    </>
+  ),
 };
 
 export default function ToolIcon({ name, size = 20, className = "" }) {

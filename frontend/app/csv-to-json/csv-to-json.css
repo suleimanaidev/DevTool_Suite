@@ -51,8 +51,11 @@
 .csv-output-wrap {
   flex: 1;
   min-height: 340px;
+  border: 1px solid var(--border);
   border-radius: 12px;
-  background: linear-gradient(150deg, #3d2329, #241417);
+  background:
+    radial-gradient(220px 180px at 50% 25%, rgba(215, 38, 56, 0.12), transparent 70%),
+    var(--card-alt);
   overflow: hidden;
 }
 .csv-output {
@@ -60,7 +63,7 @@
   padding: 1rem;
   max-height: 430px;
   overflow: auto;
-  color: #fff8ee;
+  color: var(--text);
   font-family: "Courier New", Consolas, monospace;
   font-size: 0.8rem;
   line-height: 1.55;

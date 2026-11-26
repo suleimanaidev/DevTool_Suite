@@ -1,0 +1,175 @@
+/* From Uiverse.io by wilsondesouza - https://uiverse.io/wilsondesouza/cowardly-swan-91
+   MIT License, Copyright (c) PriyanshuGupta28 (Priyanshu Gupta), wilsondesouza (Wilson Souza) */
+
+/* ===== The social icons (scoped with the uiverse-social prefix) ===== */
+.uiverse-social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uiverse-social__item {
+  margin: 0 10px;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.uiverse-social__tip {
+  position: absolute;
+  top: 100%;
+  right: 110%;
+  transform: translateY(200%);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.uiverse-social__item:hover .uiverse-social__tip {
+  opacity: 1;
+  visibility: visible;
+  top: -50px;
+}
+
+.uiverse-social__link {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #4d4d4d;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgb(43 26 29 / 8%);
+  transition: all 0.3s ease-in-out;
+}
+
+.uiverse-social__link:hover {
+  box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  color: white;
+}
+
+.uiverse-social__link svg {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+}
+
+.uiverse-social__filled {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.uiverse-social__link:hover .uiverse-social__filled {
+  height: 100%;
+}
+
+/* Per-network colours, exactly as in the source. */
+.uiverse-social__link[data-social="linkedin"] .uiverse-social__filled,
+.uiverse-social__link[data-social="linkedin"] ~ .uiverse-social__tip {
+  background-color: #0274b3;
+}
+
+.uiverse-social__link[data-social="github"] .uiverse-social__filled,
+.uiverse-social__link[data-social="github"] ~ .uiverse-social__tip {
+  background-color: #24262a;
+}
+
+.uiverse-social__link[data-social="instagram"] .uiverse-social__filled,
+.uiverse-social__link[data-social="instagram"] ~ .uiverse-social__tip {
+  background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+.uiverse-social__link[data-social="youtube"] .uiverse-social__filled,
+.uiverse-social__link[data-social="youtube"] ~ .uiverse-social__tip {
+  background-color: #ff0000;
+}
+
+/* ===== The tool page ===== */
+.social-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.social-preview-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.social-preview-head h2,
+.social-download-card h2 {
+  font-size: 1.05rem;
+}
+.social-preview-head p {
+  margin: 0;
+}
+
+.social-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  margin: 0.9rem 0;
+  padding: 2rem 2rem 2rem 4rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background:
+    radial-gradient(220px 180px at 50% 25%, rgba(215, 38, 56, 0.12), transparent 70%),
+    var(--card-alt);
+  overflow: hidden;
+}
+
+.social-hint {
+  margin: 0;
+}
+
+.social-download-card p {
+  margin-top: 0.4rem;
+}
+
+.social-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.social-license {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .social-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .social-stage {
+    min-height: 360px;
+    padding: 1.5rem 1rem 1.5rem 3rem;
+  }
+  .uiverse-social__tip {
+    font-size: 13px;
+    padding: 5px 8px;
+  }
+}

@@ -5,7 +5,7 @@ import JsonLd from "../components/JsonLd";
 import { HOME_FAQ, SITE, homeJsonLd } from "../lib/seo";
 import "./landing.css";
 
-// The ten tool cards (plain, honest descriptions).
+// The thirteen tool cards (plain, honest descriptions).
 // Page title and description for search engines (the root layout adds the rest).
 export const metadata = {
   title: { absolute: SITE.title },
@@ -133,6 +133,42 @@ const TOOLS = [
       "Updates as you type",
     ],
   },
+  {
+    icon: "social-icons",
+    title: "Social Icons",
+    href: "/social-icons",
+    time: "about 1 hour",
+    features: [
+      "LinkedIn, GitHub, Instagram and YouTube buttons",
+      "A coloured fill and tooltip on hover",
+      "Inline SVG icons with no image files",
+      "Copy or download the full code",
+    ],
+  },
+  {
+    icon: "tooltip",
+    title: "Tooltip",
+    href: "/tooltip",
+    time: "about 1 hour",
+    features: [
+      "A circular Tip badge that reveals a hint on hover",
+      "Opens on keyboard focus too",
+      "Copy the full code with one click",
+      "Download a standalone demo file",
+    ],
+  },
+  {
+    icon: "send-button",
+    title: "Send Button",
+    href: "/send-button",
+    time: "about 1 hour",
+    features: [
+      "Blue Send button with a paper-plane icon",
+      "Plane and label animate on hover",
+      "Press effect with a scale-down",
+      "Copy or download the full code",
+    ],
+  },
 ];
 
 export default function Landing() {
@@ -155,9 +191,10 @@ export default function Landing() {
           Everything you need for daily tasks, <span className="underline">in one place.</span>
         </h1>
         <p className="lead">
-          Ten small, focused tools for text, images, files and time. Measure your typing, write Markdown,
-          make invoices, count words, set timers, run calculations, inspect photos, convert CSV to JSON
-          and create QR codes. Each tool is free, and none of them needs an account.
+          Thirteen small, focused tools for text, images, files, time and UI. Measure your typing, write Markdown,
+          make invoices, count words, set timers, run calculations, inspect photos, convert CSV to JSON,
+          create QR codes, add social icons, copy a CSS tooltip and animate a send button. Each tool is free,
+          and none of them needs an account.
         </p>
         <div className="hero-buttons">
           <a href="#tools" className="btn btn-primary">
